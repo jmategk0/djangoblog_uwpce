@@ -14,7 +14,7 @@ class Post(models.Model):
         return self.title
 
     def author_name(self):
-        return " ".join([self.author.first_name,self.author.last_name])
+        return self.author.first_name + " " + self.author.last_name
 		
 
 class Category(models.Model):
