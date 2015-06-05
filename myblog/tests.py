@@ -18,9 +18,9 @@ class PostTestCase(TestCase):
         self.assertEqual(expected, actual)
 
     def test_author_name(self):
-        expected = u"This is a title"
+        expected = u"Mr. Administrator"
         p1 = Post(author=self.user)
-        actual = unicode(p1)
+        actual = p1.author_name()
         self.assertEqual(expected, actual)
 
 
